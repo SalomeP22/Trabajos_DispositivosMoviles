@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProyectoN3 20 feb</string>
+    <string name="DatoUno">Primer dato</string>
+    <string name="DatoDos">Segundo dato</string>
+    <string name="CalcularDatos">Calcular</string>
+    <string name="Resultado">El resultado es:</string>
 </resources>
