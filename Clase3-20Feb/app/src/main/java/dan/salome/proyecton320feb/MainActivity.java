@@ -2,6 +2,7 @@ package dan.salome.proyecton320feb;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 float DatoDos = Float.parseFloat(Dato2.getText().toString());
                 float Resultado = DatoUno*DatoDos;
                 Result.setText(String.valueOf(Resultado));
-
+                gotoActividad2(view);
             }
         });
     }
@@ -70,5 +71,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.i(TAG, "Entré a onDestroy");
+    }
+
+    public void gotoActividad2(View view){
+
+        Intent pasarDatos = new Intent(this, MainActivity2.class);
+        pasarDatos.putExtra("Dato11", Dato1.getText().toString());
+        pasarDatos.putExtra("Dato22", Dato2.getText().toString());
+        pasarDatos.putExtra("Resultt", Result.getText().toString());
+
+        startActivity(pasarDatos);
     }
 }
