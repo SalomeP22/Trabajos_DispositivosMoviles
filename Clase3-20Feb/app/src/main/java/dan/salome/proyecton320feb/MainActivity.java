@@ -3,6 +3,7 @@ package dan.salome.proyecton320feb;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
     TextView Result;
     Button Calcular;
 
+    Button abrirgoogle;
+
+    Button llamada;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +31,38 @@ public class MainActivity extends AppCompatActivity {
         Result =findViewById(R.id.Result);
         Calcular =findViewById(R.id.Calcular);
 
+        abrirgoogle = findViewById(R.id.google);
+        abrirgoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                irAGoogle();
+            }
+        });
+
+
+        llamada = findViewById(R.id.llamar);
+        llamada.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String numberPhone ="3217026113";
+                irALlamada(numberPhone);
+            }
+        });
+    }
+
+    public void irALlamada(String phoneNumber) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:" + phoneNumber));
+        if (intent.resolveActivity(getPackageManager()) !=null){
+            startActivity(intent);
+        }
+    }
+
+    public void irAGoogle(){
+
+        String url ="https://www.google.com.co/";
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
     }
 
     @Override

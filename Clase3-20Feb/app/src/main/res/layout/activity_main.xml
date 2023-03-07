@@ -115,12 +115,30 @@
             android:id="@+id/Calcular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:background="#770DE4E4"
-            android:text="@string/CalcularDatos"/>
+            android:gravity="center"
+            android:layout_margin="25px"
+            android:text="@string/CalcularDatos" />
+
+        <Button
+            android:id="@+id/google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#770DE4E4"
+            android:gravity="center"
+            android:layout_margin="25px"
+            android:text="@string/abrir_google" />
+
+
     </LinearLayout>
 
-
+    <Button
+        android:id="@+id/llamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#770DE4E4"
+        android:gravity="center"
+        android:text="@string/llamar" />
 
 
 </LinearLayout>

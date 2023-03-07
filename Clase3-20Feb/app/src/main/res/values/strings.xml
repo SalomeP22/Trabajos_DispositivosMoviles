@@ -5,4 +5,6 @@
     <string name="CalcularDatos">Calcular</string>
     <string name="Resultado">El resultado es:</string>
     <string name="pantalla2">Segunda Pantalla</string>
+    <string name="abrir_google">Abrir Google</string>
+    <string name="llamar">llamar</string>
 </resources>
